@@ -93,7 +93,7 @@ namespace GlikoLog.PL
                 {
                     kullanici.Email = txtEmail.Text.Trim();
                 }
-                else GecerliMi=false; lblEmail.Text = "Bu Email kullanımda!";
+                else { GecerliMi = false; lblEmail.Text = "Bu Email kullanımda!"; }
 
             }
             else { GecerliMi = false; lblEmail.Text = s5; }
@@ -102,7 +102,6 @@ namespace GlikoLog.PL
             if (s6 == null) { kullanici.Yas = Convert.ToInt32(txtYas.Text.Trim()); }
             else { GecerliMi = false; lblYas.Text = s6; }
 
-
             if (cmbCinsiyet.SelectedItem != null)
                 kullanici.Cinsiyet = (Cinsiyet)cmbCinsiyet.SelectedItem;
             else
@@ -110,7 +109,6 @@ namespace GlikoLog.PL
                 lblCinsiyet.Text = "Cinsiyet seçilmelidir.";
                 GecerliMi = false;
             }
-
 
             if (!SifreKontrol.SifreKompleksMi(txtSifre.Text))
             {
